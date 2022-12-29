@@ -21,15 +21,5 @@ function EmployeeFactory() {
 	}
 }
 
-function say() {
-	console.log(`Hi, I am ${this.name} and I am a ${this.type}`)
-}
 
-const employeeFactory = new EmployeeFactory()
-const employeesDatabse = []
-
-employeesDatabse.push(employeeFactory.create("Eusebio Simango", 1))
-
-employeesDatabse.forEach( emp => {
-	say.call(emp)
-})
+module.exports=EmployeeFactory
